@@ -22,10 +22,10 @@ public class Main {
                     user.showMenu(trendingList);
                     break;
                 case "2":
-                    AdminMenu.verifyAdmin();
+                    AdminMenu.verifyAdmin(trendingList);
                     break;
                 case "3":
-                    break;
+                    return;
                 default:
                     break;
             }

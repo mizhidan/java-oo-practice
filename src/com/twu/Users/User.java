@@ -30,6 +30,7 @@ public class User {
                     break;
                 case "4": addTrending(trendingList);
                     break;
+                case "5": return;
                 default:
                     break;
             }
@@ -48,7 +49,11 @@ public class User {
         }
         for (Trending trending : trendingList.getList()) {
             if (votedTrending.equals(trending.getTrendingName())) {
-                trending.buyTrending(voteForNum);
+                if (trending.getSuperTrending()) {
+                    trending.buyTrending(voteForNum * 2);
+                } else {
+                    trending.buyTrending(voteForNum);
+                }
                 voteNum -= voteForNum;
                 trendingList.sorted();
                 return;
@@ -67,7 +72,7 @@ public class User {
                 return;
             }
         }
-        trendingList.addTrendingToList(new Trending(addedTrending));
+        trendingList.addTrendingToList(new Trending(addedTrending, false));
     }
 
     public void buyTrending(RankList trendingList) {
@@ -78,7 +83,7 @@ public class User {
         int boughtForRanking = sc.nextInt() - 1;
         System.out.println("请输入购买金额：");
         int boughtPrice = sc.nextInt();
-        Trending boughtTrending = new Trending(boughtTrendingName);
+        Trending boughtTrending = new Trending(boughtTrendingName, false);
         boughtTrending.setIsBought();
         boughtTrending.setBoughtPrice(boughtPrice);
         boughtTrending.setBoughtRanking(boughtForRanking);

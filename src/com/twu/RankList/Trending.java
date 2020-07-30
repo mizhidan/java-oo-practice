@@ -8,8 +8,9 @@ public class Trending {
     private Boolean isSuperTrending = false;
     private int boughtRanking;
 
-    public Trending(String trendingName) {
+    public Trending(String trendingName, Boolean isSuperTrending) {
         this.trendingName = trendingName;
+        this.isSuperTrending = isSuperTrending;
     }
 
     public void buyTrending(int buyNumber) {
@@ -50,5 +51,13 @@ public class Trending {
 
     public void setBoughtRanking(int boughtRanking) {
         this.boughtRanking = boughtRanking;
+    }
+
+    public Boolean getSuperTrending() {
+        return isSuperTrending;
+    }
+
+    public void setSuperTrending(Boolean superTrending) {
+        isSuperTrending = superTrending;
     }
 }
