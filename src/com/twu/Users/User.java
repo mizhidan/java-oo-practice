@@ -50,6 +50,7 @@ public class User {
             if (votedTrending.equals(trending.getTrendingName())) {
                 trending.buyTrending(voteForNum);
                 voteNum -= voteForNum;
+                trendingList.sorted();
                 return;
             }
         }
@@ -80,6 +81,7 @@ public class User {
         Trending boughtTrending = new Trending(boughtTrendingName);
         boughtTrending.setIsBought();
         boughtTrending.setBoughtPrice(boughtPrice);
+        boughtTrending.setBoughtRanking(boughtForRanking);
         int count = 0;
         for (Trending trending : trendingList.getList()) {
             if (boughtTrendingName.equals(trending.getTrendingName())) {

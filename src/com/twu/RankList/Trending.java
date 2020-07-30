@@ -5,6 +5,8 @@ public class Trending {
     private int voteNum = 0;
     private Boolean isBought = false;
     private int boughtPrice = 0;
+    private Boolean isSuperTrending = false;
+    private int boughtRanking;
 
     public Trending(String trendingName) {
         this.trendingName = trendingName;
@@ -40,5 +42,13 @@ public class Trending {
 
     public Boolean getBought() {
         return isBought;
+    }
+
+    public int getBoughtRanking() {
+        return boughtRanking;
+    }
+
+    public void setBoughtRanking(int boughtRanking) {
+        this.boughtRanking = boughtRanking;
     }
 }
