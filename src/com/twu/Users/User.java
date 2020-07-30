@@ -37,6 +37,7 @@ public class User {
         }
     }
 
+    //给热搜投票
     public void voteForTrending(RankList trendingList) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入你要投票的热搜名称：");
@@ -62,6 +63,7 @@ public class User {
         System.out.println("没有找到要投票的热搜");
     }
 
+    //添加热搜
     public void addTrending(RankList trendingList) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入你要添加的热搜名称：");
@@ -75,6 +77,7 @@ public class User {
         trendingList.addTrendingToList(new Trending(addedTrending, false));
     }
 
+    //购买热搜
     public void buyTrending(RankList trendingList) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入你要购买的热搜名称：");

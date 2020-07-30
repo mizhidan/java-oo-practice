@@ -3,9 +3,9 @@ package com.twu.RankList;
 public class Trending {
     private String trendingName;
     private int voteNum = 0;
-    private Boolean isBought = false;
+    private Boolean isBought = false; //判断是否是购买的热搜
     private int boughtPrice = 0;
-    private Boolean isSuperTrending = false;
+    private Boolean isSuperTrending = false; //判断是否是超级热搜
     private int boughtRanking;
 
     public Trending(String trendingName, Boolean isSuperTrending) {

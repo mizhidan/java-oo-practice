@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class RankList {
     List<Trending> list = new ArrayList<>();
 
+    //显示热搜榜
     public void showList() {
         int number = 1;
         for (Trending trending : list) {
@@ -14,6 +15,7 @@ public class RankList {
         }
     }
 
+    //对热搜进行排名
     public void sorted() {
         List<Trending> sortedList = this.list.stream().filter((Trending trending) -> !trending.getBought())
                 .collect(Collectors.toList());

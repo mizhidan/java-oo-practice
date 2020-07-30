@@ -40,6 +40,7 @@ public class AdminMenu {
         }
     }
 
+    //添加热搜
     public static void addTrending(RankList trendingList) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入你要添加的热搜名称：");
@@ -53,6 +54,7 @@ public class AdminMenu {
         trendingList.addTrendingToList(new Trending(addedTrending, false));
     }
 
+    //购买热搜
     public static void addSuperTrending(RankList trendingList) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入你要添加的超级热搜名称：");
