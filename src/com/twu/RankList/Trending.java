@@ -6,10 +6,8 @@ public class Trending {
     private Boolean isBought = false;
     private int boughtPrice = 0;
 
-    public Trending(String trendingName, int voteNum, Boolean isBought) {
+    public Trending(String trendingName) {
         this.trendingName = trendingName;
-        this.voteNum = voteNum;
-        this.isBought = isBought;
     }
 
     public void buyTrending(int buyNumber) {
@@ -24,7 +22,23 @@ public class Trending {
         return trendingName;
     }
 
+    public void setVoteNum(int voteNum) {
+        this.voteNum = voteNum;
+    }
+
     public int getVoteNum() {
         return voteNum;
+    }
+
+    public void setBoughtPrice(int boughtPrice) {
+        this.boughtPrice = boughtPrice;
+    }
+
+    public int getBoughtPrice() {
+        return boughtPrice;
+    }
+
+    public Boolean getBought() {
+        return isBought;
     }
 }
