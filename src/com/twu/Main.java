@@ -2,7 +2,7 @@ package com.twu;
 
 import com.twu.Admin.AdminMenu;
 import com.twu.RankList.RankList;
-import com.twu.Users.UserMenu;
+import com.twu.Users.User;
 
 import java.util.Scanner;
 
@@ -18,7 +18,8 @@ public class Main {
             System.out.println("3.退出");
             switch (sc.next()) {
                 case "1":
-                    UserMenu.showMenu(trendingList);
+                    User user = new User();
+                    user.showMenu(trendingList);
                     break;
                 case "2":
                     AdminMenu.verifyAdmin();
